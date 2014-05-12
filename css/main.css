@@ -91,6 +91,19 @@ body {
 	top: 50px;
 }
 
+.content {
+	width: 100%;
+	background: #fff;
+	text-align: left;
+	background-size: 1000px auto;
+}
+.about-text {
+	padding: 20px;
+}
+.about-text ol {
+	padding: inherit;
+	padding-top: 0;
+}
 
 .footer {
 	padding: 20px;
