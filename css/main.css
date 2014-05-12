@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,cyrillic,cyrillic-ext);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&subset=latin,cyrillic-ext,cyrillic);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-size: 12pt;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	background: url(../img/bg.png) repeat;
+}
+.main {
+	margin: 0px auto;
+	width: 1000px;
+	position: relative;
+	background: #fff;
+	min-width: 1000px;
+}
+.header {
+	background-color: #fff;
+	width: 100%;
+	overflow: hidden;
+}
+.logo {
+	float: left;
+	margin-left: 30px;
+	height: 100px;
+	width: 190px;
+	background: url(../img/logo.png) no-repeat center;
+}
+.topmenu {
+	margin-left: 30px;
+	float: left;
+}
+.menuitem {
+	float: left;
+	list-style: none;
+	margin-left: 25px;
+	line-height: 100px;
+}
+.menuitem a {
+	text-decoration: none;
+	color: #000;
+	text-transform: uppercase;
+}
+.menuitem a:hover {
+	text-decoration: underline;
+}
+.menuitem > .booking {
+	background: #e12428;
+	border-radius: 5px;
+	padding: 5px 10px;
+	line-height: 20px;
+	color: #fff;
+}
+.topinfo {
+	float: right;
+	margin-right: 30px;
+	margin-top: 15px;
+}
+.red {
+	color: #e12428;
+}
+
+.content-main {
+	width: 100%;
+	height: 550px;
+	background: url(../img/main_big_pic.png) no-repeat;
+	background-position: center;
+	background-size: 1000px auto;
+}
+.main-banner {
+	float: left;
+	width: 350px;
+	height: 250px;
+	text-align: center;
+	margin: 150px auto auto 30px;
+}
+.main-banner a {
+	background: #e12428;
+	border-radius: 10px;
+	padding: 10px 20px;
+	line-height: 40px;
+	color: #fff;
+	font-size: x-large;
+	text-transform: uppercase;
+	text-decoration: none;
+	position: relative;
+	top: 50px;
+}
+
+
+.footer {
+	padding: 20px;
+	height: 35px;
+	line-height: 35px;
+	text-align: left;
+}
+.footer a {
+	float: right;
+	padding-right: 15px;
+}
+.footer a:first-of-type {
+	padding-right: 0px;
+}
