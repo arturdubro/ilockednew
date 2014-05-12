@@ -98,15 +98,28 @@ body {
 	background-size: 1000px auto;
 }
 .about-text {
-	padding: 20px;
+	padding: 30px;
 }
 .about-text ol {
 	padding: inherit;
 	padding-top: 0;
 }
+.quests-gallery {
+	padding: 0 30px;
+	text-align: left;
+	overflow: auto;
+}
+.img-left {
+	float: left;
+	padding: 15px 30px 15px 0;
+}
+.img-right {
+	float: right;
+	padding: 15px 0 15px 30px;
+}
 
 .footer {
-	padding: 20px;
+	padding: 30px;
 	height: 35px;
 	line-height: 35px;
 	text-align: left;
