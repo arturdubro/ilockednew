@@ -117,6 +117,10 @@ body {
 	float: right;
 	padding: 15px 0 15px 30px;
 }
+#map_canvas {
+    width: 1000px;
+    height: 350px;
+}
 
 .footer {
 	padding: 30px;

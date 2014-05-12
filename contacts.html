@@ -26,7 +26,22 @@
 	<link rel="canonical" href="http://www.ilocked.ru/"/>
 	<link rel="shortcut icon" href="./img/fav.ico" type="image/png"/>
 	<link href="./css/main.css" media="screen" rel="stylesheet" type="text/css">
- </head>
+	<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script>
+	    function initialize() {
+	    var iLocked = new google.maps.LatLng(59.926235, 30.354635);
+	    var center = new google.maps.LatLng(59.926235, 30.354635);
+	    var mapOptions = { zoom: 15, center: center };
+	    var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+	    var marker = new google.maps.Marker({ position: iLocked, map: map });
+	    var infoWindow = new google.maps.InfoWindow();
+		var html='iLocked - реальные квесты<br />ул. Коломенская д.3<br>+7-812-998-38-27';
+		infoWindow.setContent(html);
+		infoWindow.open(map, marker);
+	    }
+	    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</head>
 <body>
 <div class="main">
 	<div class="header">
@@ -57,7 +72,7 @@
 			<a href="maito:ilocked@ilocked.ru">ilocked@ilocked.ru</a>
 		</div>
 		<div class="underconstraction">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7997.4130883824655!2d30.354674000000003!3d59.926279999999856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTnCsDU1JzM0LjYiTiAzMMKwMjEnMTYuOCJF!5e0!3m2!1sru!2s!4v1399897888184" width="1000" height="350" frameborder="0" style="border:0"></iframe>
+			<div id="map_canvas"></div>
 		</div>
 	</div>
 	<div class="footer">
