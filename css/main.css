@@ -11,6 +11,10 @@ body {
 	font-weight: 300;
 	background: url(../img/bg.png) repeat;
 }
+h1 {
+	font-weight: 300;
+}
+
 .main {
 	margin: 0px auto;
 	width: 1000px;
@@ -98,28 +102,143 @@ body {
 	background-size: 1000px auto;
 }
 .about-text {
-	padding: 30px;
+	padding: 30px 30px 0px 30px;
 }
-.about-text ol {
+.about-text ol, ul {
 	padding: inherit;
 	padding-top: 0;
 }
+
 .quests-gallery {
 	padding: 0 30px;
 	text-align: left;
 	overflow: auto;
 }
-.img-left {
+.left {
 	float: left;
-	padding: 15px 30px 15px 0;
 }
-.img-right {
+.right {
 	float: right;
-	padding: 15px 0 15px 30px;
+}
+.quests-preview-container {
+	width: 450px;
+	height: 300px;
+	position: relative;
+	margin-top: 30px;
+	z-index: 0;
+}
+.quests-chernobyl:before {
+	content: "";
+	position: relative;
+	z-index: -1;
+	display: block;
+	background: url(http://cs620519.vk.me/v620519916/1405/O_xQewYS6rc.jpg) center no-repeat;
+	width: 450px;
+	height: 300px;
+	background-size: 450px auto;
+
+	filter: blur(1px); 
+	-webkit-filter: blur(1px); 
+	-moz-filter: blur(1px);
+	-o-filter: blur(1px); 
+	-ms-filter: blur(1px);
+	filter: url(../img/blur.svg#blur);
+	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='1');
+}
+.quests-pirates:before {
+	content: "";
+	position: relative;
+	z-index: -1;
+	display: block;
+	background: url(http://cs619931.vk.me/v619931916/2a4c/KS0vwhFpjvA.jpg) center no-repeat;
+	width: 450px;
+	height: 300px;
+	background-size: 450px auto;
+
+	filter: blur(1px); 
+	-webkit-filter: blur(1px); 
+	-moz-filter: blur(1px);
+	-o-filter: blur(1px); 
+	-ms-filter: blur(1px);
+	filter: url(../img/blur.svg#blur);
+	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='1');
+}
+.quests-saw:before {
+	content: "";
+	position: relative;
+	z-index: -1;
+	display: block;
+	background: url(http://cs540103.vk.me/c616528/v616528916/d595/JKhp8Gmlqbg.jpg) center no-repeat;
+	width: 450px;
+	height: 300px;
+	background-size: 450px auto;
+
+	filter: blur(1px); 
+	-webkit-filter: blur(1px); 
+	-moz-filter: blur(1px);
+	-o-filter: blur(1px); 
+	-ms-filter: blur(1px);
+	filter: url(../img/blur.svg#blur);
+	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='1');
+}
+.quests-startup {
+	background: url(../img/startup.png) center no-repeat;
+	background-size: auto 300px;
+}
+
+.quests-info {
+	padding: 0px 0px 15px 15px;
+	font-weight: 300;
+	width: 300px;
+	color: #fff;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+.quests-info a {
+	background: #e12428;
+	border-radius: 10px;
+	padding: 5px 10px;
+	line-height: 40px;
+	color: #fff;
+	font-size: large;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.map-container {
+    padding-top: 30px;
 }
 #map_canvas {
     width: 1000px;
     height: 350px;
+}
+
+.quest-pic-chernobyl {
+	background: url(http://cs620519.vk.me/v620519916/1405/O_xQewYS6rc.jpg) center no-repeat;
+	background-size: 1000px auto;
+	width: 1000px;
+	height: 665px;
+	position: relative;
+}
+.quest-info {
+	padding: 20px 0px 10px 30px;
+	background: rgba(255,255,255,0.6);
+	font-weight: 300;
+	width: 300px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+.quest-info a {
+	background: #e12428;
+	border-radius: 10px;
+	padding: 10px 20px;
+	line-height: 70px;
+	color: #fff;
+	font-size: x-large;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 
 .footer {
