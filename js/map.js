@@ -5,7 +5,7 @@ function initialize() {
 	    var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
 	    var marker = new google.maps.Marker({ position: iLocked, map: map });
 	    var infoWindow = new google.maps.InfoWindow();
-		var html='iLocked - реальные квесты<br />ул. Коломенская д.3 во дворе<br>+7-812-998-38-27';
+		var html='iLocked - реальные квесты<br />ул. Коломенская д.3 во дворе<br>8 (812) 998-38-27';
 		infoWindow.setContent(html);
 		infoWindow.open(map, marker);
 		google.maps.event.addListener(marker, 'click', function(){
