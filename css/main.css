@@ -231,10 +231,9 @@ h1 {
 	position: relative;
 }
 .quest-info {
-	padding: 20px 0px 10px 30px;
+	padding: 20px 30px 10px 30px;
 	background: rgba(255,255,255,0.6);
 	font-weight: 300;
-	width: 300px;
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
