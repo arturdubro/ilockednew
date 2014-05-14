@@ -147,7 +147,7 @@ h1 {
 	position: relative;
 	z-index: -1;
 	display: block;
-	background: url(http://cs620519.vk.me/v620519916/1405/O_xQewYS6rc.jpg) center no-repeat;
+	background: url(../photo/01.jpg) center no-repeat;
 	width: 450px;
 	height: 300px;
 	background-size: 450px auto;
@@ -165,7 +165,7 @@ h1 {
 	position: relative;
 	z-index: -1;
 	display: block;
-	background: url(http://cs619931.vk.me/v619931916/2a4c/KS0vwhFpjvA.jpg) center no-repeat;
+	background: url(../photo/11.jpg) center no-repeat;
 	width: 450px;
 	height: 300px;
 	background-size: 450px auto;
@@ -202,10 +202,12 @@ h1 {
 }
 
 .quests-info {
-	padding: 0px 0px 15px 15px;
+	padding: 15px 0px;
 	font-weight: 300;
 	color: #fff;
 	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
 	bottom: 0px;
 	left: 0px;
 }
@@ -219,6 +221,9 @@ h1 {
 	text-transform: uppercase;
 	text-decoration: none;
 }
+.quests-info-text {
+	padding-left: 15px;
+}
 
 .map-container {
     padding-top: 30px;
@@ -229,14 +234,14 @@ h1 {
 }
 
 .quest-pic-chernobyl {
-	background: url(http://cs620519.vk.me/v620519916/1405/O_xQewYS6rc.jpg) center no-repeat;
+	background: url(../photo/01.jpg) center no-repeat;
 	background-size: 1000px auto;
 	width: 1000px;
 	height: 665px;
 	position: relative;
 }
 .quest-pic-pirates {
-	background: url(http://cs619931.vk.me/v619931916/2a4c/KS0vwhFpjvA.jpg) center no-repeat;
+	background: url(../photo/11.jpg) center no-repeat;
 	background-size: 1000px auto;
 	width: 1000px;
 	height: 665px;
