@@ -56,10 +56,11 @@ function onPlayerStateChange(event) {
 $(document).ready(function(){
     $(document).on('click', '.playvideo', function(event){
     	event.preventDefault();
-        if (!isMobile.any()) video.playVideo();
+        if (!isMobile.any() || video.getPlayerState() == 0 || video.getPlayerState() == 2) video.playVideo();
         $('.main-banner').hide();
         $('#video').show();
     });
+
     $('.quests-preview-container').hover(function(){
         $(this).addClass('over'); 
     }, function(){
