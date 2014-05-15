@@ -83,6 +83,7 @@ h1 {
 	background: url(../img/main_big_pic.png) no-repeat;
 	background-position: center;
 	background-size: 1000px auto;
+	position: relative;
 }
 .main-banner {
 	float: left;
@@ -107,6 +108,14 @@ h1 {
 	display: none;
 	width: 1000px;
 	height: 550px;
+}
+.playvideo {
+	position: absolute;
+	top: 230px;
+	right: 250px;
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
 }
 
 .content {
@@ -147,59 +156,20 @@ h1 {
 	z-index: 0;
 	cursor: pointer;
 }
-.quests-chernobyl:before {
-	content: "";
-	position: relative;
-	z-index: -1;
-	display: block;
-	background: url(../photo/01.jpg) center no-repeat;
+.quests-chernobyl {
+	background: url(../img/chernobyl.jpg) center no-repeat;
 	width: 450px;
 	height: 300px;
-	background-size: 450px auto;
-
-	filter: blur(1px); 
-	-webkit-filter: blur(1px); 
-	-moz-filter: blur(1px);
-	-o-filter: blur(1px); 
-	-ms-filter: blur(1px);
-	filter: url(../img/blur.svg#blur);
-	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='1');
 }
-.quests-pirates:before {
-	content: "";
-	position: relative;
-	z-index: -1;
-	display: block;
-	background: url(../photo/11.jpg) center no-repeat;
+.quests-pirates {
+	background: url(../img/pirates.jpg) center no-repeat;
 	width: 450px;
 	height: 300px;
-	background-size: 450px auto;
-
-	filter: blur(1px); 
-	-webkit-filter: blur(1px); 
-	-moz-filter: blur(1px);
-	-o-filter: blur(1px); 
-	-ms-filter: blur(1px);
-	filter: url(../img/blur.svg#blur);
-	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='1');
 }
-.quests-saw:before {
-	content: "";
-	position: relative;
-	z-index: -1;
-	display: block;
-	background: url(http://cs540103.vk.me/c616528/v616528916/d595/JKhp8Gmlqbg.jpg) center no-repeat;
+.quests-saw {
+	background: url(../img/saw.jpg) center no-repeat;
 	width: 450px;
 	height: 300px;
-	background-size: 450px auto;
-
-	filter: blur(1px); 
-	-webkit-filter: blur(1px); 
-	-moz-filter: blur(1px);
-	-o-filter: blur(1px); 
-	-ms-filter: blur(1px);
-	filter: url(../img/blur.svg#blur);
-	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='1');
 }
 .quests-startup {
 	background: url(../img/startup.png) center no-repeat;
@@ -250,6 +220,10 @@ h1 {
 	height: 665px;
 	position: relative;
 }
+#photogallery1, #photogallery2 {
+	z-index: -1;
+}
+
 .quest-info {
 	padding: 20px 30px 10px 30px;
 	background: rgba(255,255,255,0.6);
@@ -257,6 +231,7 @@ h1 {
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
+	z-index: 0;
 }
 .quest-info a {
 	background: #e12428;

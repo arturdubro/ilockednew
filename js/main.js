@@ -1,27 +1,29 @@
 $(window).load(function(){
-var currentstate = 0;
-function startGallery() {
-    var quest = $('#photogallery').attr('class');
-    if (quest) {
-    var chernobyl = ['./photo/01.jpg', './photo/02.jpg'];
-    var pirates = ['./photo/11.jpg', './photo/12.jpg', './photo/13.jpg', './photo/14.jpg'];
-    if (quest == 'quest-pic-chernobyl') {
-    	if (currentstate == chernobyl.length) currentstate = 0;
-    	var imgsrc = chernobyl[currentstate];
-    	};
-    if (quest == 'quest-pic-pirates') {
-    	if (currentstate == pirates.length) currentstate = 0;
-    	var imgsrc = pirates[currentstate];
-    	};
-	//$('.'+quest).css('background-image','url('+imgsrc+')');
-	$('.'+quest).animate({opacity: 0}, 'slow', function() {
-		$(this).css('background-image','url('+imgsrc+')').animate({opacity: 1});
-	});
-	currentstate++;
-	setTimeout(startGallery, 7200);
-    };
-};
-startGallery();
+	var currentstate = 0;
+	var nextstate = 1;
+	var chernobyl = ['./photo/01.jpg', './photo/02.jpg'];
+	var pirates = ['./photo/11.jpg', './photo/12.jpg', './photo/13.jpg', './photo/14.jpg'];
+
+	function startGallery() {
+	    var quest = $('#photogallery').attr('class');
+	    if (quest) {
+	    if (quest == 'quest-pic-chernobyl') {
+	    	if (currentstate == chernobyl.length) currentstate = 0;
+	    	var imgsrc = chernobyl[currentstate];
+	    	};
+	    if (quest == 'quest-pic-pirates') {
+	    	if (currentstate == pirates.length) currentstate = 0;
+	    	var imgsrc = pirates[currentstate];
+	    	};
+		//$('.'+quest).css('background-image','url('+imgsrc+')');
+		$('.'+quest).animate({opacity: 0}, 'slow', function() {
+			$(this).css('background-image','url('+imgsrc+')').animate({opacity: 1});
+		});
+		currentstate++;
+		setTimeout(startGallery, 7200);
+	    };
+	};
+	startGallery();
 });
 
 var tag = document.createElement('script');
@@ -49,7 +51,7 @@ function onPlayerStateChange(event) {
 };
 
 $(document).ready(function(){
-    $(document).on('click', '.content-main', function(event){
+    $(document).on('click', '.playvideo', function(event){
     	event.preventDefault();
         video.playVideo();
         $('.main-banner').hide();
