@@ -56,10 +56,7 @@ function onPlayerStateChange(event) {
 $(document).ready(function(){
     $(document).on('click', '.playvideo', function(event){
     	event.preventDefault();
-        if (!isMobile.any()) { 
-            video.playVideo();
-            alert('playing!');
-        };
+        if (!isMobile.any()) video.playVideo();
         $('.main-banner').hide();
         $('#video').show();
     });
