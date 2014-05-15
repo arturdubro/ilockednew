@@ -16,16 +16,13 @@ var isMobile = {
             return navigator.userAgent.match(/BlackBerry/i);
         },
         iOS: function() {
-            return navigator.userAgent.match(/iPhone|iPod/i);
+            return navigator.userAgent.match(/iPhone|iPod|iPad/i);
         },
         Opera: function() {
             return navigator.userAgent.match(/Opera Mini/i);
         },
         Windows: function() {
             return navigator.userAgent.match(/IEMobile/i);
-        },
-        iPad: function(){
-            return navigator.userAgent.match(/iPad/i);
         },
         any: function() {
             return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
@@ -42,7 +39,7 @@ function onYouTubeIframeAPIReady() {
   width: '1000px',
   height: '550px',
   videoId: 'aqQ7Hv8YL6k',
-  playerVars: { 'controls': 0, 'showinfo': 0 },
+  playerVars: { 'controls': 1, 'showinfo': 0 },
   events: {
     'onStateChange': onPlayerStateChange
   }
@@ -59,7 +56,7 @@ function onPlayerStateChange(event) {
 $(document).ready(function(){
     $(document).on('click', '.playvideo', function(event){
     	event.preventDefault();
-        if (!isMobile.iPad()) video.playVideo();
+        if (!isMobile.any()) video.playVideo();
         $('.main-banner').hide();
         $('#video').show();
     });
