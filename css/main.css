@@ -157,16 +157,31 @@ h1 {
 	cursor: pointer;
 }
 .quests-chernobyl {
+	background: url(../img/chernobyl_blur.png) center no-repeat;
+	width: 450px;
+	height: 300px;
+}
+.quests-chernobyl.over {
 	background: url(../img/chernobyl.jpg) center no-repeat;
 	width: 450px;
 	height: 300px;
 }
 .quests-pirates {
+	background: url(../img/pirates_blur.png) center no-repeat;
+	width: 450px;
+	height: 300px;
+}
+.quests-pirates.over {
 	background: url(../img/pirates.jpg) center no-repeat;
 	width: 450px;
 	height: 300px;
 }
 .quests-saw {
+	background: url(../img/saw_blur.png) center no-repeat;
+	width: 450px;
+	height: 300px;
+}
+.quests-saw.over {
 	background: url(../img/saw.jpg) center no-repeat;
 	width: 450px;
 	height: 300px;

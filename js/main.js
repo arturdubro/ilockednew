@@ -57,4 +57,9 @@ $(document).ready(function(){
         $('.main-banner').hide();
         $('#video').show();
     });
+    $('.quests-preview-container').hover(function(){
+        $(this).addClass('over'); 
+    }, function(){
+        $(this).removeClass('over');
+    });
 });
