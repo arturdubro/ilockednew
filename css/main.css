@@ -103,6 +103,11 @@ h1 {
 	position: relative;
 	top: 50px;
 }
+#video {
+	display: none;
+	width: 1000px;
+	height: 550px;
+}
 
 .content {
 	width: 100%;
@@ -234,14 +239,12 @@ h1 {
 }
 
 .quest-pic-chernobyl {
-	background: url(../photo/01.jpg) center no-repeat;
 	background-size: 1000px auto;
 	width: 1000px;
 	height: 665px;
 	position: relative;
 }
 .quest-pic-pirates {
-	background: url(../photo/11.jpg) center no-repeat;
 	background-size: 1000px auto;
 	width: 1000px;
 	height: 665px;
