@@ -8,6 +8,29 @@ function startGallery(){
     });
 };
 
+var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        iPad: function(){
+            return navigator.userAgent.match(/iPad/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+};
 
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
@@ -36,7 +59,7 @@ function onPlayerStateChange(event) {
 $(document).ready(function(){
     $(document).on('click', '.playvideo', function(event){
     	event.preventDefault();
-        video.playVideo();
+        if (!isMobile.iPad()) video.playVideo();
         $('.main-banner').hide();
         $('#video').show();
     });
@@ -45,5 +68,5 @@ $(document).ready(function(){
     }, function(){
         $(this).removeClass('over');
     });
-    setInterval('startGallery()', 7000);
+    setInterval('startGallery()', 5000);
 });
