@@ -1,30 +1,13 @@
-$(window).load(function(){
-	var currentstate = 0;
-	var nextstate = 1;
-	var chernobyl = ['./photo/01.jpg', './photo/02.jpg'];
-	var pirates = ['./photo/11.jpg', './photo/12.jpg', './photo/13.jpg', './photo/14.jpg'];
+function startGallery(){
+    var active = $('#photogallery .active');
+    var next = (active.next().length > 0) ? active.next() : $('#photogallery img:first');
+    next.css('z-index',2);
+    active.fadeOut(1500,function(){
+		active.css('z-index',1).show().removeClass('active');
+		next.css('z-index',3).addClass('active');
+    });
+};
 
-	function startGallery() {
-	    var quest = $('#photogallery').attr('class');
-	    if (quest) {
-	    if (quest == 'quest-pic-chernobyl') {
-	    	if (currentstate == chernobyl.length) currentstate = 0;
-	    	var imgsrc = chernobyl[currentstate];
-	    	};
-	    if (quest == 'quest-pic-pirates') {
-	    	if (currentstate == pirates.length) currentstate = 0;
-	    	var imgsrc = pirates[currentstate];
-	    	};
-		//$('.'+quest).css('background-image','url('+imgsrc+')');
-		$('.'+quest).animate({opacity: 0}, 'slow', function() {
-			$(this).css('background-image','url('+imgsrc+')').animate({opacity: 1});
-		});
-		currentstate++;
-		setTimeout(startGallery, 7200);
-	    };
-	};
-	startGallery();
-});
 
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
@@ -62,4 +45,5 @@ $(document).ready(function(){
     }, function(){
         $(this).removeClass('over');
     });
+    setInterval('startGallery()', 7000);
 });
