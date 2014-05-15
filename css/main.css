@@ -222,6 +222,8 @@ h1 {
 }
 #photogallery1, #photogallery2 {
 	z-index: -1;
+	width: 1000px;
+	height: 665px;
 }
 
 .quest-info {
