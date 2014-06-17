@@ -20,7 +20,7 @@
 	</style>
 	<script type="text/javascript">
 	$(document).ready(function(){
-		$('#22, #24, #43').addClass('green');
+		$('#11, #14, #41, #44').addClass('green');
 		$(document).on('click', 'td', function(event){
 			event.preventDefault();
 			var id = parseInt($(this).attr('id'));
@@ -31,13 +31,18 @@
 				$('#'+l).toggleClass('green');
 			};
 			$(this).toggleClass('green');
+			if (($('#22').attr('class') && $('#23').attr('class') && $('#32').attr('class') && $('#33').attr('class')) == 'green') {
+				alert('WIN!');
+				$('#22, #23, #32, #33').removeClass('green');
+				$('#11, #14, #41, #44').addClass('green');
+			};
 		});
 		$(document).on('click', '.reset', function(event){
 			event.preventDefault();
 			for (var i = 10; i < 45; i++) {
 				$('#'+i).removeClass('green');
 			};
-			$('#22, #24, #43').addClass('green');
+			$('#11, #14, #41, #44').addClass('green');
 		});
 	});
 	</script>
@@ -51,6 +56,6 @@
 		<tr><td class="white">Г</td><td id="41"></td><td id="42"></td><td id="43"></td><td id="44"></td></tr>
 	</table>
 	<p class="reset"><u>ЗАНОВО</u></p><p>Задача: кликая по клеткам, сделать внутренние 4 клетки зелеными, а внешние 12 - красными.</p>
-	<p class="console"></p>
+	<p>Решение: сначала прокликать поочереди все угловые, потом все центральные.</p>
 </body>
 <html>
