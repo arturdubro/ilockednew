@@ -1,0 +1,54 @@
+<html>
+<head>	
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<style>
+	td {
+		height: 50px;
+		width: 50px;
+	}
+	td {
+		background-color: red;
+		vertical-align: center;
+		text-align: center;
+	}
+	td.green {
+		background-color: green;
+	}
+	td.white {
+		background-color: white;
+	}
+	</style>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#22, #24, #43').addClass('green');
+
+		$(document).on('click', 'td', function(event){
+			var id = parseInt($(this).attr('id'));
+			for (var i = id-3; i < id+4; i++) {
+				$('#'+i).toggleClass('green');
+			};
+			for (var l = id-30; l < id+40; l=l+10) {
+				$('#'+l).toggleClass('green');
+			};
+		});
+		$(document).on('click', '.reset', function(event){
+			event.preventDefault();
+			for (var i = 10; i < 45; i++) {
+				$('#'+i).removeClass('green');
+			};
+			$('#22, #24, #43').addClass('green');
+		});
+	});
+	</script>
+</head>
+<body>
+	<table>
+		<tr><td class="white"></td><td class="white">1</td><td class="white">2</td><td class="white">3</td><td class="white">4</td></tr>
+		<tr><td class="white">А</td><td id="11"></td><td id="12"></td><td id="13"></td><td id="14"></td></tr>
+		<tr><td class="white">Б</td><td id="21"></td><td id="22"></td><td id="23"></td><td id="24"></td></tr>
+		<tr><td class="white">В</td><td id="31"></td><td id="32"></td><td id="33"></td><td id="34"></td></tr>
+		<tr><td class="white">Г</td><td id="41"></td><td id="42"></td><td id="43"></td><td id="44"></td></tr>
+	</table>
+	<p class="reset">ЗАНОВО</p><p>Задача: кликая по клеткам, сделать внутренние 4 клетки зелеными, а внешние 12 - красными.</p>
+</body>
+<html>
