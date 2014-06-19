@@ -19,8 +19,9 @@
 	}
 	</style>
 	<script type="text/javascript">
+	var count = 0;
 	$(document).ready(function(){
-		$('#11, #14, #41, #44').addClass('green');
+		$('#14, #23, #32, #33, #34, #44').addClass('green');
 		$(document).on('click', 'td', function(event){
 			event.preventDefault();
 			var id = parseInt($(this).attr('id'));
@@ -40,6 +41,8 @@
 				$('#22, #23, #32, #33').removeClass('green');
 				$('#11, #14, #41, #44').addClass('green');
 			};
+			count++;
+			$('.clicks').text(count+' кликов');
 		});
 		$(document).on('click', '.reset', function(event){
 			event.preventDefault();
@@ -61,6 +64,6 @@
 	</table>
 	<p class="reset"><u>ЗАНОВО</u></p><p>Задача: кликая по клеткам, сделать внутренние 4 клетки зелеными, а внешние 12 - красными.</p>
 	<p>Решение: сначала прокликать поочереди все угловые, потом все центральные.</p>
-	<p class="console"></p>
+	<p class="console"></p><p class="clicks"> - кликов.</p>
 </body>
 <html>

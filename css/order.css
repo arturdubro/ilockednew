@@ -1,0 +1,105 @@
+table {
+	vertical-align: middle;
+	text-align: left;
+	border-collapse: collapse;
+}
+td {
+	height: 60px;
+	width: 150px;
+	border: solid 1px black;
+	font-size: x-large;
+	padding-left: 10px;
+}
+td.weekday {
+	text-align: center;
+	padding-left: 0;
+}
+td.past {
+	background-color: gray;
+	color: white;
+}
+td.future {
+	cursor: pointer;
+}
+td.today {
+	background-color: red;
+	color: white;
+}
+.popup {
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	background: #0b0b0b;
+	opacity: 0.8;
+	z-index: 1000;
+}
+.ordercontainer {
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	z-index: 1000;
+}
+.orderwrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+.orderwrapper::before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.ordermenu {
+	display: none;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 auto;
+	text-align: left;
+	background-color: white;
+	padding: 10px;
+	z-index: 1002;
+}
+.ordermenu > .quest > ul {
+	list-style: none;
+	padding: 0;
+}
+.ordermenu > .quest {
+	float: left;
+	margin-top: 10px;
+	width: 200px;
+}
+.close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	font-size: 28px;
+	line-height: 20px;
+	font-style: bold;
+}
+.finishorder {
+	display: none;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 auto;
+	text-align: left;
+	background-color: white;
+	padding: 10px;
+	z-index: 1002;
+}
