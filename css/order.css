@@ -4,7 +4,7 @@ table {
 	border-collapse: collapse;
 }
 td {
-	height: 60px;
+	height: 100px;
 	width: 150px;
 	border: solid 1px black;
 	font-size: x-large;
@@ -20,6 +20,9 @@ td.past {
 }
 td.future {
 	cursor: pointer;
+}
+p.free {
+	font-size: medium;
 }
 td.today {
 	background-color: red;
@@ -61,7 +64,7 @@ td.today {
 	height: 100%;
 	vertical-align: middle;
 }
-.ordermenu {
+.ordermenu, .finishorder {
 	display: none;
 	position: relative;
 	display: inline-block;
@@ -69,7 +72,7 @@ td.today {
 	margin: 0 auto;
 	text-align: left;
 	background-color: white;
-	padding: 10px;
+	padding: 20px;
 	z-index: 1002;
 }
 .ordermenu > .quest > ul {
@@ -81,7 +84,7 @@ td.today {
 	margin-top: 10px;
 	width: 200px;
 }
-.close {
+.close, .back {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -92,14 +95,6 @@ td.today {
 	line-height: 20px;
 	font-style: bold;
 }
-.finishorder {
-	display: none;
-	position: relative;
-	display: inline-block;
-	vertical-align: middle;
-	margin: 0 auto;
-	text-align: left;
-	background-color: white;
-	padding: 10px;
-	z-index: 1002;
+.back {
+	left: 0;
 }
